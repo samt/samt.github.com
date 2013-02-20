@@ -78,7 +78,10 @@ h2 {
 }
 
 .posts li  .date {
+	font-size: 1.2em;
+}
+
+.date {
 	color: #999;
 	font-family: monospace;
-	font-size: 1.2em;
 }
