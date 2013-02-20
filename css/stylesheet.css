@@ -21,7 +21,7 @@ a:active,a:hover {
 }
 
 #heading {
-	margin: 20px 0;
+	margin: 40px 0;
 }
 
 #heading a:link, #heading a:visited, #heading a:active, #heading a:hover, #heading a {
@@ -36,6 +36,14 @@ a:active,a:hover {
 	border-left: 1px solid #222;
 	margin-left: 12px;
 	padding-left: 12px;
+}
+
+#heading img {
+	float: right;
+	display: inline-block;
+	border: 2px solid #222;
+	margin-top: -30px;
+	margin-right: 20px;
 }
 
 h1, h2, h3 {
