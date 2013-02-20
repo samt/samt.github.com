@@ -5,4 +5,4 @@ title: A better blog
 
 # {{ page.title }}
 
-It's been a long time since I've worked with Ruby and I can't say I was any good with it at the time, but lately an job prospect in my life has been pushing me to dig deeper in it. I've been wanting to leave PHP completely for technolgies like node.js and I hope to include Ruby in that too. My first step is getting a blog working on Jekyll instead of WordPress to which this is the end result. I found this quite easy to set up and I am impressed with it thus far.
+I am building my blog better now, at least from this point of view. I am tired of Wordpress and am enjoying a new fresh start with this Jekyll application. I might switch emberlabs to something similar if this continues to work out well.
