@@ -1,34 +1,29 @@
 ---
 layout: default
-title: Sam Thompson
+title: Sam Thompson | coffee and code
 ishome: true
 ---
 
-<section>
-	<h1>Posts</h1>
-	<ul class="posts">
-	{% for post in site.posts %}
-		<li><span class="date">[{{ post.date | date_to_string }}]</span> &rsaquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-	{% endfor %}
-	</ul>
-</section>
-
-<section>
-	<h1>Projects</h1>
-	<ul class="posts">
-		<li><a href="https://github.com/samt/barcode">Barcode</a> &rsaquo; Generate HTML or image barcodes (node)</li>
-		<li><a href="http://logbot.com">Logbot</a> &rsaquo; IRC logs and bot (node)</li>
-		<li><a href="https://signa.tv">Signa.tv</a> &rsaquo; Digital signage (node)</li>
-		<li><a href="https://github.com/emberlabs/inferno">inferno</a> &rsaquo; Generic form builder (html5)</li>
-	</ul>
-</section>
-
-<section>
-	<h1>Organizations</h1>
-	<ul class="posts">
-		<li><a href="https://emberlabs.org">emberlabs</a> &rsaquo; <em>Founder</em> - Software </li>
-		<li><a href="http://marshenlabs.com">Marshen Labs</a> &rsaquo; <em>Co-founder</em> - Prototyping and software</li>
-		<li><a href="https://www.phpbb.com">phpBB</a> &rsaquo; <em>Website Team</em> - Open source bulletin board</li>
-		<li><a href="https://hackerlab.org">Hacker Lab</a> &rsaquo; <em>Resident</em></li>
-	</ul>
-</section>
+<div class="row">
+	<div class="span12">
+		<ul class="unstyled" id="postlist">
+		{% for post in site.posts %}
+			<li>
+				<div class="row">
+					<div class="span2">
+						<time datetime="{{ post.date | date_to_xmlschema }}">
+							<div class="datetime">
+								<span>{{ post.date | date: "%d" }}</span>
+								<span>{{ post.date | date: "%b" }}<br>{{ post.date | date: "%Y" }}</span>
+							</div>
+						</time>
+					</div>
+					<div class="span10">
+						<h2 class="postlink"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+					</div>
+				</div>
+			</li>
+		{% endfor %}
+		</ul>
+	</div>
+</div>

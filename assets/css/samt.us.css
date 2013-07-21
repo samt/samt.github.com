@@ -1,0 +1,38 @@
+/*
+ */
+ 
+#main {
+	margin-top: 20px;
+}
+
+.datetime {
+	float:left;
+}
+
+.datetime span:nth-child(1) {
+	display: block;
+	float:left;
+	font-size: 3em;
+	line-height: 1em;
+}
+.datetime span:nth-child(2) {
+	display: block;
+	float: left;
+	margin-left: 3px;
+}
+
+h2.postlink {
+	margin: 0;
+}
+
+ul#postlist li {
+	margin: 10px 0;
+}
+
+#footer {
+	margin-bottom: 25px;
+}
+
+a h1 {
+	color: #333;
+}

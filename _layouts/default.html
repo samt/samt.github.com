@@ -3,39 +3,79 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{{ page.title }}</title>
-		<link rel="alternate" type="application/atom+xml" title="Sam Thompson" href="http://samt.us/atom.xml">
-		<link rel="stylesheet" href="/css/normalize.css" type="text/css" media="screen, projection">
-		<link rel="stylesheet" href="/css/stylesheet.css" type="text/css" media="screen, projection">
+
+		<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/css/samt.us.css" rel="stylesheet">
+
+		<!--[if lt IE 9]>
+		  <script src="assets/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="samt.us ATOM feed">
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-10734446-12']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+			  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
 	</head>
 	<body>
-		<div id="wrap">
+		<div class="container" id="main">
 			<header>
-				<div id="heading">
-					<img src="https://secure.gravatar.com/avatar/1f5a38cbc0108ffbdf671185d50d031b?s=75" height="75" width="75" alt="Sam Thompson">
-					<a href="/" title="Go home">Sam Thompson</a>
-					<span>Musings of code, life, and coffee</span>
+				<div class="row">
+					<div class="span2">
+						<a href="/"><img id="headerimg" src="http://gravatar.com/avatar/d63af852f26650ab3b78717881d4efc5?s=140" class="img-circle"></a>
+					</div>
+
+					<div class="span10">
+						<a href="/"><h1>Sam Thompson</h1></a>
+						<p>Coffee &amp; Code</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="span12">
+						<hr>
+					</div>
 				</div>
 			</header>
 
 			{{ content }}
 
 			<footer>
-				<div id="footer">
-					<p><a href="/about/">About</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp; <a id="eml" href="mailto:null@localhost">Email</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp; <a href="https://github.com/samt/">Github</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp; <a href="https://twitter.com/synerror/">Twitter</a></p>
-					<p>&copy {{ site.time|date: "%Y" }} Sam Thompson</p>
+				<div class="row">
+					<div class="span12">
+						<hr>
+					</div>
+				</div>
+
+				<div class="row" id="footer">
+					<div class="span12">
+						<small>&copy; 2013 Sam Thompson</small>
+
+						<div class="pull-right">
+							<a target="_blank" href="https://github.com/samt/">Github</a> &bull;
+							<a target="_blank" href="http://twitter.com/samdtho/">Twitter</a> &bull;
+							<a href="mailto:sam@localhost" id="x8D2bK">Email</a>
+						</div>
+					</div>
 				</div>
 			</footer>
 		</div>
+
+		<script src="/assets/js/jquery-2.0.2.min.js"></script>
+		<script src="/assets/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-10734446-12']);
-		  _gaq.push(['_trackPageview']);
-		  (function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			document.getElementById('eml').href=unescape("%6Dail%74o%3As%61m%40%65mb%65rl%61bs%2Eo%72g");
-		  })();
+			$(function() {
+				$('#x8D2bK').attr('href', function (k, val) {
+					return val.substr(0,7) + 'blog' + String.fromCharCode(1<<6) + val.substr(7,10) + 't.us';
+				});
+			});
 		</script>
 	</body>
 </html>

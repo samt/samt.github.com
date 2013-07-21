@@ -2,8 +2,24 @@
 layout: default
 ---
 
-<div id="post">
-	<article>
-		{{ content }}
-	</article>
+<div class="row">
+	<div class="span6">
+		<h1>{{ page.title }}</h1>
+		<p><em><time datetime="{{ page.postdate | date_to_xmlschema }}">{{ page.postdate | date: "%d-%b-%Y" }}</time> &raquo; by Sam Thompson</em></p>
+		<p>
+			{{ content }}
+		</p>
+	</div>
+	<div class="span4 offset2">
+		<aside>
+			<h3>About the Author</h3>
+			<p>Sam Thompson is a programmer and UX designer based out of Sacramento CA. He attends conventions frequently and is actively involved in Open Source. He also teaches class at <a href="http://hackerlab.org">Hacker Lab</a>, a coworking space in Downtown Sacramento.<br><br>In his limited free time, he does photography and travels.</p>
+		</aside>
+	</div>
+</div>
+
+<div class="row">
+	<div class="span12">
+		<br><a href="/">&laquo; Go Back</a>
+	</div>
 </div>

@@ -4,13 +4,13 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Sam Thompson</title>
-	<subtitle>Musings of code, life, and coffee</subtitle>
+	<subtitle>code &amp; coffee</subtitle>
 	<link href="http://samt.us" />
 	<updated>{{ site.time|date_to_xmlschema  }}</updated>
 	<id>http://samt.us</id>
 	<author>
 		<name>Sam Thompson</name>
-		<email>sam@emberlabs.org</email>
+		<email>me@samt.us</email>
 	</author>
 	{% for post in site.posts %}
 	<entry>
